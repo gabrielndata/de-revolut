@@ -1,0 +1,11 @@
+version: '3'
+services:
+    revolut_nest_app:
+        build: .
+        container_name: "revolut_nest_app"
+        volumes:
+            - .:/app
+        ports:
+            - "5000:5000"
+        command:
+            python ./app.py
